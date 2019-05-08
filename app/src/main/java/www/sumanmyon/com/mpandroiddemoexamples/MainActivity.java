@@ -7,11 +7,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import www.sumanmyon.com.mpandroiddemoexamples.LineChart.LineChartActivity;
 import www.sumanmyon.com.mpandroiddemoexamples.PiChart.PiChartActivity;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button pieChartButton;
+    Button pieChartButton, lineChartButton;
     Activity activity;
 
     @Override
@@ -20,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         pieChartButton = findViewById(R.id.button_piechart);
+        lineChartButton = findViewById(R.id.button_linechart);
 
         pieChartButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -27,6 +29,14 @@ public class MainActivity extends AppCompatActivity {
 //                activity = new PiChartActivity();
 //                startIntent();
                 Intent i = new Intent(MainActivity.this,PiChartActivity.class);
+                startActivity(i);
+            }
+        });
+
+        lineChartButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(MainActivity.this, LineChartActivity.class);
                 startActivity(i);
             }
         });
