@@ -14,4 +14,10 @@
         android:text="Pie Chart"
         android:id="@+id/button_piechart"/>
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Line Chart"
+        android:id="@+id/button_linechart"/>
+
 </LinearLayout>
